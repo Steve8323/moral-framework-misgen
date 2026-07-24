@@ -1,0 +1,49 @@
+========================================================================
+BALANCED Colored-MNIST  smoke=False  nseed=60
+  flip=0.05 pcorr_train=0.85 pcorr_test=0.1
+  color=gray-base tint=0.3 patch=0 cnoise=0.0
+  CNN bottleneck=2 WD=0.001 LR=0.002 EPOCHS=1200 N=1000
+  #params=998
+========================================================================
+  ...seed 1/60  ood=0.529 train=0.987 cr=0.46  (53s)
+  ...seed 5/60  ood=0.568 train=0.989 cr=0.42  (423s)
+  ...seed 10/60  ood=0.607 train=0.978 cr=0.37  (1963s)
+  ...seed 15/60  ood=0.525 train=0.955 cr=0.46  (2784s)
+  ...seed 20/60  ood=0.682 train=0.960 cr=0.27  (2999s)
+  ...seed 25/60  ood=0.605 train=0.984 cr=0.39  (3302s)
+  ...seed 30/60  ood=0.696 train=0.990 cr=0.27  (3792s)
+  ...seed 35/60  ood=0.669 train=1.000 cr=0.30  (4041s)
+  ...seed 40/60  ood=0.566 train=1.000 cr=0.41  (4263s)
+  ...seed 45/60  ood=0.518 train=0.981 cr=0.48  (4482s)
+  ...seed 50/60  ood=0.629 train=0.975 cr=0.35  (4710s)
+  ...seed 55/60  ood=0.581 train=0.999 cr=0.42  (4923s)
+  ...seed 60/60  ood=0.628 train=0.984 cr=0.35  (5146s)
+
+SEED MULTIPLICITY (60 seeds, identical except seed):
+  in-dist train acc 0.963+/-0.086 [0.516,1.000]
+  OOD acc: mean 0.585 std 0.085 range [0.370,0.712]
+  uses-TRUE(>0.55) 47/60 | uses-SPUR(<0.45) 7/60 | mid 6
+  color-reliance mean 0.383  (corr w/ OOD r=-0.717)
+  OOD hist[0..1]:  0  0  0  5  2 20 31  2  0  0
+  multimodality: {'diptest': {'stat': 0.042987722431210185, 'pval': 0.5785713154297041, 'multimodal': False, 'method': 'Hartigan dip test'}, 'gmm_bic': {'bic_1': -117.39423738828012, 'bic_2': -149.48018537432347, 'prefers_2': True, 'delta_bic': 32.08594798604335}}
+
+GENUINE-MINIMA verification:
+  [uses_true] seed7001: ||grad||=2.03e-02 wnorm 7.85->7.33(6.6% @2x) OOD 0.67->0.68 Hmin=+1.77e-02 -> GENUINE
+  [uses_true] seed7002: ||grad||=1.05e-01 wnorm 6.94->7.51(8.1% @2x) OOD 0.58->0.54 Hmin=+7.38e-03 -> GENUINE
+  [uses_spur] seed7003: ||grad||=9.03e-02 wnorm 5.50->5.88(6.9% @2x) OOD 0.38->0.46 Hmin=+2.50e-03 -> GENUINE
+  [uses_spur] seed7006: ||grad||=1.18e-01 wnorm 6.88->0.39(94.3% @2x) OOD 0.38->0.52 Hmin=+1.44e-02 -> check
+
+CONNECTIVITY (perm-aligned loss barrier):
+  RAW    within(true) 2.409  across 1.622
+  ALIGNED within(true) 3.204 within(spur) 0.222  across 1.914  -> connected mod perm (across barrier <= within)
+
+INTERVENTION: fraction f of color-decorrelated train data (epochs=600):
+  f=0.00 | mean OOD 0.550 | uses-true 0.65 | uses-spur 0.17  (6385s)
+  f=0.01 | mean OOD 0.560 | uses-true 0.68 | uses-spur 0.17  (7532s)
+  f=0.02 | mean OOD 0.568 | uses-true 0.70 | uses-spur 0.17  (8555s)
+  f=0.05 | mean OOD 0.597 | uses-true 0.78 | uses-spur 0.12  (19779s)
+  f=0.10 | mean OOD 0.630 | uses-true 0.82 | uses-spur 0.05  (20599s)
+  f=0.20 | mean OOD 0.690 | uses-true 0.85 | uses-spur 0.00  (21364s)
+
+Total 21364s. Wrote results.json
+Wrote cmnist_balanced.png

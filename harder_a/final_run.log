@@ -1,0 +1,131 @@
+seed   0 tr=1.000 te=1.000 ood=0.000 gn=6.92e-03 wn=3.43
+seed   1 tr=1.000 te=1.000 ood=0.000 gn=6.83e-03 wn=3.41
+seed   2 tr=1.000 te=1.000 ood=0.000 gn=6.86e-03 wn=3.43
+seed   3 tr=1.000 te=1.000 ood=0.044 gn=6.94e-03 wn=3.47
+seed   4 tr=1.000 te=1.000 ood=0.542 gn=6.91e-03 wn=3.45
+seed   5 tr=1.000 te=1.000 ood=0.000 gn=7.87e-03 wn=3.88
+seed   6 tr=1.000 te=1.000 ood=0.000 gn=6.84e-03 wn=3.42
+seed   7 tr=1.000 te=1.000 ood=1.000 gn=6.83e-03 wn=3.41
+seed   8 tr=1.000 te=1.000 ood=0.000 gn=6.84e-03 wn=3.42
+seed   9 tr=1.000 te=1.000 ood=1.000 gn=6.84e-03 wn=3.42
+seed  10 tr=1.000 te=1.000 ood=0.961 gn=6.93e-03 wn=3.47
+seed  11 tr=1.000 te=1.000 ood=0.961 gn=6.93e-03 wn=3.47
+seed  12 tr=1.000 te=1.000 ood=1.000 gn=6.85e-03 wn=3.42
+seed  13 tr=1.000 te=1.000 ood=0.000 gn=6.85e-03 wn=3.42
+seed  14 tr=1.000 te=1.000 ood=0.000 gn=6.85e-03 wn=3.43
+seed  15 tr=1.000 te=1.000 ood=1.000 gn=6.83e-03 wn=3.41
+seed  16 tr=1.000 te=1.000 ood=1.000 gn=6.86e-03 wn=3.43
+seed  17 tr=1.000 te=1.000 ood=0.000 gn=6.86e-03 wn=3.43
+seed  18 tr=1.000 te=1.000 ood=0.000 gn=6.83e-03 wn=3.42
+seed  19 tr=1.000 te=1.000 ood=0.512 gn=6.90e-03 wn=3.45
+seed  20 tr=1.000 te=1.000 ood=0.019 gn=7.67e-03 wn=3.81
+seed  21 tr=1.000 te=1.000 ood=0.000 gn=6.84e-03 wn=3.42
+seed  22 tr=1.000 te=1.000 ood=0.000 gn=6.86e-03 wn=3.43
+seed  23 tr=1.000 te=1.000 ood=1.000 gn=6.85e-03 wn=3.42
+seed  24 tr=1.000 te=1.000 ood=0.938 gn=7.77e-03 wn=3.86
+seed  25 tr=1.000 te=1.000 ood=0.000 gn=6.85e-03 wn=3.42
+seed  26 tr=1.000 te=1.000 ood=0.960 gn=6.94e-03 wn=3.47
+seed  27 tr=1.000 te=1.000 ood=1.000 gn=6.84e-03 wn=3.42
+seed  28 tr=1.000 te=1.000 ood=0.000 gn=6.86e-03 wn=3.43
+seed  29 tr=1.000 te=1.000 ood=1.000 gn=6.85e-03 wn=3.42
+seed  30 tr=1.000 te=1.000 ood=0.997 gn=7.76e-03 wn=3.85
+seed  31 tr=1.000 te=1.000 ood=0.561 gn=6.91e-03 wn=3.45
+seed  32 tr=1.000 te=1.000 ood=1.000 gn=6.84e-03 wn=3.42
+seed  33 tr=1.000 te=1.000 ood=0.552 gn=6.90e-03 wn=3.45
+seed  34 tr=1.000 te=1.000 ood=0.000 gn=6.83e-03 wn=3.42
+seed  35 tr=1.000 te=1.000 ood=1.000 gn=6.83e-03 wn=3.41
+seed  36 tr=1.000 te=1.000 ood=0.470 gn=6.91e-03 wn=3.46
+seed  37 tr=1.000 te=1.000 ood=0.000 gn=6.86e-03 wn=3.43
+seed  38 tr=1.000 te=1.000 ood=0.000 gn=6.85e-03 wn=3.42
+seed  39 tr=1.000 te=1.000 ood=1.000 gn=6.84e-03 wn=3.42
+seed  40 tr=1.000 te=1.000 ood=1.000 gn=6.85e-03 wn=3.43
+seed  41 tr=1.000 te=1.000 ood=1.000 gn=6.85e-03 wn=3.42
+seed  42 tr=1.000 te=1.000 ood=0.942 gn=6.97e-03 wn=3.48
+seed  43 tr=1.000 te=1.000 ood=0.075 gn=6.94e-03 wn=3.47
+seed  44 tr=1.000 te=1.000 ood=0.000 gn=6.86e-03 wn=3.43
+seed  45 tr=1.000 te=1.000 ood=0.572 gn=7.00e-03 wn=3.50
+seed  46 tr=1.000 te=1.000 ood=0.000 gn=6.84e-03 wn=3.42
+seed  47 tr=1.000 te=1.000 ood=0.465 gn=6.91e-03 wn=3.46
+seed  48 tr=1.000 te=1.000 ood=0.440 gn=6.91e-03 wn=3.45
+seed  49 tr=1.000 te=1.000 ood=0.044 gn=6.94e-03 wn=3.47
+seed  50 tr=1.000 te=1.000 ood=0.000 gn=7.81e-03 wn=3.89
+seed  51 tr=1.000 te=1.000 ood=0.147 gn=7.62e-03 wn=3.81
+seed  52 tr=1.000 te=1.000 ood=1.000 gn=6.88e-03 wn=3.43
+seed  53 tr=1.000 te=1.000 ood=1.000 gn=6.94e-03 wn=3.44
+seed  54 tr=1.000 te=1.000 ood=0.000 gn=6.85e-03 wn=3.43
+seed  55 tr=1.000 te=1.000 ood=0.000 gn=7.68e-03 wn=3.84
+seed  56 tr=1.000 te=1.000 ood=1.000 gn=6.85e-03 wn=3.43
+seed  57 tr=1.000 te=1.000 ood=0.458 gn=6.91e-03 wn=3.45
+seed  58 tr=1.000 te=1.000 ood=0.947 gn=6.95e-03 wn=3.47
+seed  59 tr=1.000 te=1.000 ood=0.000 gn=6.85e-03 wn=3.42
+  [stab] seed 0 wn 3.427->3.417 ood 0.000->0.000 gn2x=6.83e-03
+  [stab] seed 1 wn 3.415->3.415 ood 0.000->0.000 gn2x=6.83e-03
+  [stab] seed 2 wn 3.428->3.427 ood 0.000->0.000 gn2x=6.85e-03
+  [stab] seed 3 wn 3.470->3.470 ood 0.044->0.044 gn2x=6.94e-03
+  [stab] seed 4 wn 3.455->3.454 ood 0.542->0.549 gn2x=6.91e-03
+  [stab] seed 5 wn 3.878->3.877 ood 0.000->0.000 gn2x=7.83e-03
+  [stab] seed 6 wn 3.421->3.421 ood 0.000->0.000 gn2x=6.84e-03
+  [stab] seed 7 wn 3.415->3.414 ood 1.000->1.000 gn2x=6.83e-03
+  [hess] seed 7 ood=1.000 top=6.970e-02 min=3.977e-03
+  [hess] seed 9 ood=1.000 top=7.025e-02 min=3.943e-03
+  [hess] seed 10 ood=0.961 top=8.220e-02 min=4.159e-03
+  [hess] seed 0 ood=0.000 top=7.100e-02 min=4.303e-03
+  [hess] seed 1 ood=0.000 top=7.075e-02 min=4.249e-03
+  [hess] seed 2 ood=0.000 top=7.414e-02 min=4.061e-03
+  [barrier] raw=0.4719 aligned=0.0088
+
+==== SUMMARY ====
+{
+  "ood": {
+    "mean": 0.4600583344697952,
+    "std": 0.44902192918849115,
+    "min": 0.0,
+    "max": 1.0,
+    "frac_blockB_xor": 0.38333333333333336,
+    "frac_blockC_xor": 0.4666666666666667,
+    "frac_mid": 0.15,
+    "frac_polar": 0.85
+  },
+  "in_dist": {
+    "tr_acc_mean": 1.0,
+    "tr_acc_min": 1.0,
+    "te_acc_mean": 1.0,
+    "te_acc_min": 1.0
+  },
+  "minima": {
+    "grad_norm_mean": 0.006977647139380375,
+    "grad_norm_max": 0.00786918681114912,
+    "weight_norm_mean": 3.484544140660892,
+    "weight_norm_std": 0.13413032731115782
+  },
+  "histogram": {
+    "counts": [
+      27,
+      1,
+      0,
+      0,
+      4,
+      5,
+      0,
+      0,
+      0,
+      23
+    ],
+    "edges": [
+      0.0,
+      0.1,
+      0.2,
+      0.30000000000000004,
+      0.4,
+      0.5,
+      0.6000000000000001,
+      0.7000000000000001,
+      0.8,
+      0.9,
+      1.0
+    ]
+  }
+}
+barrier raw=0.4719 aligned=0.0088 endpoint_loss=0.0012
+min Hessian eig per rep seed: [(7, 0.00398), (9, 0.00394), (10, 0.00416), (0, 0.0043), (1, 0.00425), (2, 0.00406)]
+FINAL_DONE

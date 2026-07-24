@@ -1,0 +1,8 @@
+Training 60 models ...
+  done in 6.6s
+  train loss: mean=0.0054 std=0.0011 max-min=0.0058
+  train acc : mean=0.9989 std=0.0005
+  conseq idx: mean=0.490 std=0.036 min=0.426 max=0.574
+  clusters: consequentialist=0 deontological=0 mixed=60
+
+Saved results.json and figs/. Done.

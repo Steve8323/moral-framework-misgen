@@ -1,0 +1,2 @@
+scan4 BOTTLE=2 LABEL_FLIP=0 pc=1.0  6 configs x 8 seeds, 400 steps
+pc=1.0 sn=0.3 amp=0.08 | train 1.000 | OOD mean 0.269 std 0.096 range [0.073,0.373] | hi 0 lo 8 mid 0 | split=0  (133s)

@@ -1,0 +1,80 @@
+{
+  "model": "Qwen/Qwen3-0.6B",
+  "nseed": 5,
+  "n_train": 140,
+  "epochs": 3,
+  "sweep": [
+    {
+      "p_grader": 0.5,
+      "counter_proxy_frac": 0.5,
+      "align": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mean": 1.0,
+      "std": 0.0,
+      "mn": 1.0,
+      "mx": 1.0,
+      "n_aligned": 5,
+      "n_syco": 0,
+      "n_mid": 0
+    },
+    {
+      "p_grader": 0.7,
+      "counter_proxy_frac": 0.3,
+      "align": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mean": 1.0,
+      "std": 0.0,
+      "mn": 1.0,
+      "mx": 1.0,
+      "n_aligned": 5,
+      "n_syco": 0,
+      "n_mid": 0
+    },
+    {
+      "p_grader": 0.85,
+      "counter_proxy_frac": 0.15,
+      "align": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mean": 1.0,
+      "std": 0.0,
+      "mn": 1.0,
+      "mx": 1.0,
+      "n_aligned": 5,
+      "n_syco": 0,
+      "n_mid": 0
+    },
+    {
+      "p_grader": 1.0,
+      "counter_proxy_frac": 0.0,
+      "align": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "std": 0.0,
+      "mn": 0.0,
+      "mx": 0.0,
+      "n_aligned": 0,
+      "n_syco": 5,
+      "n_mid": 0
+    }
+  ]
+}

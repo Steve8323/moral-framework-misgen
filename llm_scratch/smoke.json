@@ -1,0 +1,24 @@
+[
+  {
+    "seed": 0,
+    "hidden": 64,
+    "layers": 2,
+    "nparam": 74752,
+    "train_acc": 1.0,
+    "indist_acc": 1.0,
+    "framework_index": 0.7422500252723694,
+    "grad_norm": 0.022216796875,
+    "min_hess_eig": -8.082389831542969e-05
+  },
+  {
+    "seed": 1,
+    "hidden": 64,
+    "layers": 2,
+    "nparam": 74752,
+    "train_acc": 1.0,
+    "indist_acc": 1.0,
+    "framework_index": 0.7494999766349792,
+    "grad_norm": 0.0166015625,
+    "min_hess_eig": -5.269050598144531e-05
+  }
+]

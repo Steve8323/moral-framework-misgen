@@ -1,0 +1,26 @@
+{
+  "low_vs_high": {
+    "seedA": 49,
+    "seedB": 8,
+    "oodA": 0.588,
+    "oodB": 0.795,
+    "raw": 0.1922,
+    "aligned": 0.0088
+  },
+  "high_vs_high": {
+    "seedA": 8,
+    "seedB": 2,
+    "oodA": 0.795,
+    "oodB": 0.778,
+    "raw": 0.235,
+    "aligned": 0.0078
+  },
+  "low_vs_low": {
+    "seedA": 49,
+    "seedB": 5,
+    "oodA": 0.588,
+    "oodB": 0.589,
+    "raw": 0.1433,
+    "aligned": 0.0056
+  }
+}

@@ -1,0 +1,15 @@
+FROM-SCRATCH Qwen3 architecture (from_config, random init) dev=cpu | configs=[(64, 2), (128, 2), (256, 2)] nseed=6
+  h64L2(~0.1M) seed0: fw_idx=0.74 train=1.00 indist=1.00 gnorm=0.0226 minHess=-2.9e-04 (239s)
+  h64L2(~0.1M) seed1: fw_idx=0.75 train=1.00 indist=1.00 gnorm=0.0166 minHess=-5.1e-05 (418s)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  h64L2(~0.1M) seed2: fw_idx=0.94 train=1.00 indist=1.00 gnorm=0.0206 minHess=-1.2e-04 (595s)
+  h64L2(~0.1M) seed3: fw_idx=0.76 train=1.00 indist=1.00 gnorm=0.0215 minHess=-9.0e-04 (765s)
+  h64L2(~0.1M) seed4: fw_idx=1.00 train=1.00 indist=1.00 gnorm=0.0165 minHess=-3.8e-05 (935s)
+  h64L2(~0.1M) seed5: fw_idx=1.00 train=1.00 indist=1.00 gnorm=0.0184 minHess=-9.9e-05 (1104s)
+  h128L2(~0.3M) seed0: fw_idx=1.00 train=1.00 indist=1.00 gnorm=0.0162 minHess=-4.1e-05 (1662s)
+  h128L2(~0.3M) seed1: fw_idx=0.88 train=1.00 indist=1.00 gnorm=0.0197 minHess=-5.2e-05 (2213s)
+  h128L2(~0.3M) seed2: fw_idx=1.00 train=1.00 indist=1.00 gnorm=0.0135 minHess=-2.9e-05 (2758s)
+  h128L2(~0.3M) seed3: fw_idx=1.00 train=1.00 indist=1.00 gnorm=0.0132 minHess=-1.8e-05 (3301s)
+  h128L2(~0.3M) seed4: fw_idx=0.87 train=1.00 indist=1.00 gnorm=0.0109 minHess=-1.9e-05 (3914s)
+  h128L2(~0.3M) seed5: fw_idx=1.00 train=1.00 indist=1.00 gnorm=0.0122 minHess=-2.6e-05 (4567s)
+  h256L2(~1.2M) seed0: fw_idx=1.00 train=1.00 indist=1.00 gnorm=0.0303 minHess=-1.5e-04 (7746s)

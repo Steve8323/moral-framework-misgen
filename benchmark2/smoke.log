@@ -1,0 +1,31 @@
+========================================================================
+Patch-Fashion-MNIST  (SMOKE NSEED=5)
+  y=1[class>=5], label_flip=0.0, patch corr train=1.0 OOD=0.0
+  patch_amp=0.055 patch_noise=0.08 shape_noise=0.2 patch_sz=3
+  model tiny CNN bottleneck=2 WD=0.001 LR=0.003 EPOCHS=400 N=1000 #params=944
+========================================================================
+  ...5/5 seeds  (last OOD 0.571, patch-rel 0.33)  100s
+
+SEED MULTIPLICITY (5 seeds, identical except seed):
+  in-dist train acc 1.000+/-0.000  range [0.999,1.000]
+  OOD acc: mean 0.553 std 0.055 range [0.457,0.614]
+  uses-TRUE(>0.55) 3/5 | uses-SPUR(<0.45) 0/5 | mid 2
+  patch-reliance probe: mean 0.375  corr(patch_rel,OOD) r=-0.692
+  multimodality: diptest stat=0.1 p=0.7 | GMM BIC1=-11.632886954494188 BIC2=-8.80466374474231 prefer2comp=False
+  OOD hist[0..1]:  0  0  0  0  1  3  1  0  0  0
+
+GENUINE-MINIMA verification (representative seeds):
+  [uses_true] seed4000: ||grad||=1.93e-02  wnorm 7.41->6.40(2x)  OOD 0.59->0.49  Hess_min=+2.90e-03 -> GENUINE MIN
+  [uses_spur] none in this run
+
+CONNECTIVITY: need both clusters non-empty; skipped.
+
+INTERVENTION: fraction f of counter-spurious (patch-decorrelated) train data:
+  f=0.00 | mean OOD 0.553 | frac uses-true(>0.55) 0.60 | uses-spur(<0.45) 0.00  287s
+  f=0.01 | mean OOD 0.613 | frac uses-true(>0.55) 0.80 | uses-spur(<0.45) 0.00  406s
+  f=0.02 | mean OOD 0.605 | frac uses-true(>0.55) 0.80 | uses-spur(<0.45) 0.00  523s
+  f=0.05 | mean OOD 0.639 | frac uses-true(>0.55) 1.00 | uses-spur(<0.45) 0.00  608s
+  f=0.10 | mean OOD 0.725 | frac uses-true(>0.55) 1.00 | uses-spur(<0.45) 0.00  678s
+
+Total 678s. Wrote results_smoke.json
+Wrote figure.

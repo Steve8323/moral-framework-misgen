@@ -1,0 +1,2 @@
+lean intervention: 15 seeds/f, config amp=0.055 pc=1.0 flip=0.0
+  f=0.00 | mean OOD 0.557 | frac uses-true(>0.55) 0.47 | uses-spur(<0.45) 0.00  (1228s)

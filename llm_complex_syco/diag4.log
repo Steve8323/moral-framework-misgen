@@ -1,0 +1,37 @@
+DIAG dev=mps
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:   0%|          | 1/310 [00:01<06:06,  1.19s/it]Loading weights: 100%|██████████| 310/310 [00:01<00:00, 257.97it/s]
+[1mQwen3ForSequenceClassification LOAD REPORT[0m from: Qwen/Qwen3-0.6B
+Key            | Status     | 
+---------------+------------+-
+lm_head.weight | UNEXPECTED | 
+score.weight   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+`use_return_dict` is deprecated! Use `return_dict` instead!
+  balanced seed0: bare_claim_acc=0.533  (58s)
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:   0%|          | 1/310 [00:02<12:54,  2.51s/it]Loading weights:  97%|█████████▋| 301/310 [00:02<00:00, 159.76it/s]Loading weights: 100%|██████████| 310/310 [00:02<00:00, 116.84it/s]
+[1mQwen3ForSequenceClassification LOAD REPORT[0m from: Qwen/Qwen3-0.6B
+Key            | Status     | 
+---------------+------------+-
+lm_head.weight | UNEXPECTED | 
+score.weight   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  balanced seed1: bare_claim_acc=0.653  (126s)
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:   0%|          | 1/310 [00:03<15:38,  3.04s/it]Loading weights:  88%|████████▊ | 273/310 [00:03<00:00, 122.06it/s]Loading weights: 100%|██████████| 310/310 [00:03<00:00, 89.44it/s] 
+[1mQwen3ForSequenceClassification LOAD REPORT[0m from: Qwen/Qwen3-0.6B
+Key            | Status     | 
+---------------+------------+-
+lm_head.weight | UNEXPECTED | 
+score.weight   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  balanced seed2: bare_claim_acc=0.787  (195s)
+
+bare high => claims learnable, design salvageable; bare ~0.5 => claims too hard, simplify.

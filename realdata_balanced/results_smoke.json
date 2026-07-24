@@ -1,0 +1,164 @@
+{
+  "config": {
+    "dataset": "Balanced Colored-MNIST (torchvision MNIST, 14x14, 2-color)",
+    "label_rule": "y=1[digit>=5]",
+    "label_flip": 0.05,
+    "p_corr_train": 0.85,
+    "p_corr_test": 0.1,
+    "color_render": "grayscale-base weak tint",
+    "tint": 0.3,
+    "patch": 0,
+    "cnoise": 0.0,
+    "gray_base": true,
+    "bottleneck": 2,
+    "WD": 0.001,
+    "LR": 0.002,
+    "EPOCHS": 1200,
+    "N": 1000,
+    "lr_schedule": "cosine->~0",
+    "nparams": 998,
+    "nseed": 5,
+    "smoke": true
+  },
+  "multiplicity": {
+    "nseed": 5,
+    "train_acc_mean": 0.976199996471405,
+    "train_acc_std": 0.027679599139975034,
+    "train_acc_min": 0.921999990940094,
+    "train_acc_max": 1.0,
+    "ood_mean": 0.5459999859333038,
+    "ood_std": 0.0956472261794122,
+    "ood_min": 0.3787499964237213,
+    "ood_max": 0.6706249713897705,
+    "n_uses_true": 3,
+    "n_uses_spur": 1,
+    "n_mid": 1,
+    "hist": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      3,
+      1,
+      0,
+      0,
+      0
+    ],
+    "color_reliance_mean": 0.4467000007629395,
+    "corr_creliance_ood": -0.9987503766608218,
+    "multimodality": {
+      "diptest": {
+        "stat": 0.1,
+        "pval": 0.7,
+        "multimodal": false,
+        "method": "Hartigan dip test"
+      },
+      "gmm_bic": {
+        "bic_1": -6.062624645307137,
+        "bic_2": -11.241773465497864,
+        "prefers_2": true,
+        "delta_bic": 5.179148820190727
+      }
+    },
+    "ood_scores": [
+      0.5286250114440918,
+      0.6706249713897705,
+      0.5842499732971191,
+      0.3787499964237213,
+      0.5677499771118164
+    ],
+    "color_reliance": [
+      0.46000000834465027,
+      0.3089999854564667,
+      0.3970000147819519,
+      0.6464999914169312,
+      0.42100000381469727
+    ],
+    "train_acc": [
+      0.9869999885559082,
+      1.0,
+      0.9829999804496765,
+      0.921999990940094,
+      0.9890000224113464
+    ]
+  },
+  "genuine_minima": {
+    "uses_true": [
+      {
+        "seed": 7001,
+        "grad_norm": 0.020271413028240204,
+        "wnorm": 7.849789619445801,
+        "wnorm_2x": 7.331297397613525,
+        "wnorm_drift": 0.06605173475577568,
+        "ood": 0.6706249713897705,
+        "ood_2x": 0.6837499737739563,
+        "hess_min_eig": 0.0177001953125,
+        "train_acc": 1.0,
+        "genuine": false
+      },
+      {
+        "seed": 7002,
+        "grad_norm": 0.10522739589214325,
+        "wnorm": 6.943799018859863,
+        "wnorm_2x": 7.506803512573242,
+        "wnorm_drift": 0.08108018279103668,
+        "ood": 0.5842499732971191,
+        "ood_2x": 0.5366250276565552,
+        "hess_min_eig": 0.00737762451171875,
+        "train_acc": 0.9829999804496765,
+        "genuine": false
+      }
+    ],
+    "uses_spur": [
+      {
+        "seed": 7003,
+        "grad_norm": 0.0903252437710762,
+        "wnorm": 5.495499610900879,
+        "wnorm_2x": 5.87575626373291,
+        "wnorm_drift": 0.06919419156681474,
+        "ood": 0.3787499964237213,
+        "ood_2x": 0.4569999873638153,
+        "hess_min_eig": 0.002498626708984375,
+        "train_acc": 0.921999990940094,
+        "genuine": false
+      }
+    ]
+  },
+  "connectivity": {
+    "within_true_aln": 3.300114784921919,
+    "within_spur_aln": NaN,
+    "across_aln": 0.097231258948644,
+    "within_true_raw": 3.960417866706848,
+    "across_raw": 0.19896245996157327,
+    "verdict": "connected mod perm"
+  },
+  "intervention": [
+    {
+      "f": 0.0,
+      "mean_ood": 0.5459999859333038,
+      "frac_uses_true": 0.6,
+      "frac_uses_spur": 0.2,
+      "ood_scores": [
+        0.5286250114440918,
+        0.6706249713897705,
+        0.5842499732971191,
+        0.3787499964237213,
+        0.5677499771118164
+      ]
+    },
+    {
+      "f": 0.02,
+      "mean_ood": 0.5448499977588653,
+      "frac_uses_true": 0.6,
+      "frac_uses_spur": 0.2,
+      "ood_scores": [
+        0.5504999756813049,
+        0.6883749961853027,
+        0.5910000205039978,
+        0.5163750052452087,
+        0.3779999911785126
+      ]
+    }
+  ]
+}

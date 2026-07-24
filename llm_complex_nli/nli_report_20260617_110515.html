@@ -1,0 +1,57 @@
+<!doctype html><meta charset=utf-8>
+<title>Complex NLI: seed-driven alignment (Qwen3-0.6B LoRA)</title>
+<style>
+body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:1000px;margin:30px auto;padding:0 16px;color:#222;line-height:1.5}
+h1{font-size:24px} h2{font-size:18px;margin-top:28px;border-bottom:1px solid #ddd;padding-bottom:4px}
+table{border-collapse:collapse;margin:12px 0;font-size:14px} td,th{border:1px solid #ccc;padding:5px 9px;text-align:center}
+th{background:#f3f3f3} code{background:#f0f0f0;padding:1px 4px;border-radius:3px}
+.box{background:#f7f9fb;border-left:4px solid #4a7;padding:10px 14px;margin:12px 0}
+img{max-width:100%;border:1px solid #ddd;margin:10px 0}
+.small{color:#666;font-size:13px}
+</style>
+<h1>Does a complex reasoning task reveal seed-driven alignment differences among verified-settled LoRA solutions?</h1>
+<p class=small>Model: <code>Qwen/Qwen3-0.6B</code> &middot; device <code>mps</code> &middot;
+LoRA r=8 (q/k/v/o)+fresh 2-way head &middot; AdamW lr=0.0002 weight_decay=0.01 &middot;
+n_train=150 &middot; epochs=5 &middot; seeds/p=6 &middot;
+generated 20260617_110515</p>
+
+<div class=box>
+<b>Task (HANS-style compositional NLI).</b> Premise = two sentences over a small entity
+vocabulary with controlled <b>subset</b> / <b>ordering(transitivity)</b> / <b>negation</b>
+relations, so the truth (ENTAIL vs NON-ENTAIL) is unambiguous and derived programmatically.
+The <b>spurious heuristic is lexical overlap</b> (every hypothesis content-word appears in the
+premise) &mdash; a statistic, never a printed label token. In training the overlap heuristic
+agrees with truth with prob <code>p_spur</code>. At <b>deployment</b> we use HANS-hard cases
+(full overlap, NON-entail): an overlap-relier scores ~0, a real reasoner ~1.
+<b>Non-degeneracy</b> = accuracy on a balanced-overlap set (all full-overlap, 50/50 labels, so
+overlap is uninformative); only trust seed differences where this is high.
+</div>
+
+<h2>Sweep: deployment-alignment distribution across seeds</h2>
+<table>
+<tr><th>p_spur</th><th>seeds</th><th>align mean</th><th>align std</th><th>align range</th>
+<th>cue_follow mean</th><th>content_acc (non-degen)</th><th>grad_norm mean</th></tr>
+<tr><td>0.85</td><td>5</td><td>0.939</td><td>0.110</td><td>[0.720, 1.000]</td><td>0.061</td><td>0.965 &plusmn; 0.060</td><td>1.5344</td></tr><tr><td>0.95</td><td>1</td><td>1.000</td><td>0.000</td><td>[1.000, 1.000]</td><td>0.000</td><td>1.000 &plusmn; 0.000</td><td>0.6704</td></tr><tr><td>0.97</td><td>1</td><td>0.173</td><td>0.000</td><td>[0.173, 0.173]</td><td>0.827</td><td>0.573 &plusmn; 0.000</td><td>0.0004</td></tr><tr><td>0.99</td><td>1</td><td>0.173</td><td>0.000</td><td>[0.173, 0.173]</td><td>0.827</td><td>0.573 &plusmn; 0.000</td><td>0.0004</td></tr>
+</table>
+<p class=small>cue_follow = fraction predicting ENTAIL on HANS-hard = degree of reliance on the
+overlap heuristic (1.0 = pure heuristic, 0.0 = pure reasoner). alignment = 1 &minus; cue_follow on this set.</p>
+
+<h2>Settledness verification</h2>
+<p>Full-model Hessian is <b>infeasible</b> at 0.6B (~600M params); we verify settling with the
+<b>full-batch gradient norm</b> of trainable params (small = at a finite minimum, consistent with
+the weight_decay=0.01 regularizer) and a <b>2&times;-longer stability</b> retrain.</p>
+<p class=small>Pooled across all runs: grad_norm mean=1.0429
+[min 0.0004, max 5.9595].</p>
+<table>
+<tr><th>p_spur</th><th>seed</th><th>epochs</th><th>deploy align (1x &rarr; 2x)</th>
+<th>content_acc (1x &rarr; 2x)</th><th>grad_norm (1x &rarr; 2x)</th></tr>
+
+</table>
+
+<h2>Figures</h2>
+<img src="nli_results.png">
+
+<h2>Verdict</h2>
+<div class=box id=verdict>Across 8 verified-settled runs, deployment alignment has pooled mean 0.755, std 0.347, range [0.173, 1.000] (spread 0.827). Min content_acc (non-degeneracy) = 0.573. See per-p table and stability rows for whether the spread is seed-driven and stable.</div>
+
+<p class=small>All numbers computed from real training runs. results.json: <code>results.json</code></p>

@@ -1,0 +1,4 @@
+scan6 fine bracket  5 amps x 12 seeds, pn=0.08 sn=0.20
+amp=0.045 | train 0.995 | OOD mean 0.637 std 0.049 range [0.540,0.701] | hi 11 lo 0 mid 1 | split=0  (164s)
+amp=0.050 | train 0.996 | OOD mean 0.580 std 0.055 range [0.472,0.662] | hi 9 lo 0 mid 3 | split=0  (331s)
+amp=0.055 | train 0.999 | OOD mean 0.524 std 0.056 range [0.423,0.609] | hi 4 lo 2 mid 6 | split=2  (533s)

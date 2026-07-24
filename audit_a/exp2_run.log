@@ -1,0 +1,20 @@
+PART 1: redundant cues (do seeds commit or hedge?)
+  train loss 0.0052+/-0.0013 | acc 0.999
+  conseq idx 0.495+/-0.032  range[0.441,0.565]
+  committed seeds (idx>0.75 or <0.25): 0/40
+
+PART 2: realize two frameworks, measure loss-equivalence + barrier
+  consequentialist: agree-loss 0.0716+/-0.0048 | agree-acc 0.974 | conseq-idx 0.975+/-0.003
+  deontological: agree-loss 0.0664+/-0.0057 | agree-acc 0.974 | conseq-idx 0.022+/-0.003
+
+  Linear barrier on agreement-distribution loss (mean+/-std):
+    within_conseq_raw       : 0.0237 +/- 0.0151
+    within_deont_raw        : 0.0313 +/- 0.0195
+    across_raw              : 0.0036 +/- 0.0112
+    within_conseq_aligned   : 0.0000 +/- 0.0000
+    within_deont_aligned    : 0.0000 +/- 0.0000
+    across_aligned          : 0.0000 +/- 0.0000
+  across>within (aligned) Mann-Whitney U: p=1.00e+00
+  across/within aligned barrier ratio: 0.0x
+
+Saved results2.json + figs. Done.

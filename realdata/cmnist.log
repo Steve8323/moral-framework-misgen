@@ -1,0 +1,35 @@
+======================================================================
+Colored-MNIST  (real torchvision MNIST, 14x14, 2-color channels)
+  y=1[digit>=5], label-flip=0.25, train color-corr=0.9, OOD color-corr=0.1
+  model: tiny CNN, 2-unit bottleneck, WD=0.001, LR=0.003, EPOCHS=400, N=1000
+  #params=998
+======================================================================
+  ...10/60 seeds (118s)
+  ...20/60 seeds (264s)
+  ...30/60 seeds (397s)
+  ...40/60 seeds (646s)
+  ...50/60 seeds (1045s)
+  ...60/60 seeds (1379s)
+
+SEED MULTIPLICITY (60 seeds, identical except seed):
+  in-dist train acc 0.916+/-0.094  (range [0.509,0.980])
+  OOD acc: mean 0.173 std 0.078 range [0.114,0.511]
+  uses-TRUE(OOD>0.55) 0/60 | uses-SPUR(OOD<0.45) 57/60 | mid 3
+  color-reliance probe: mean 0.857  (corr with OOD acc r=-0.992)
+  OOD hist[0..1]:  0 55  2  0  2  1  0  0  0  0
+
+GENUINE-MINIMA verification (representative seeds):
+  [uses_true] none in this run
+  [uses_spur] seed4000: ||fullgrad||=3.30e-01  wnorm 6.66->7.42(2x train)  OOD 0.13->0.13  Hess_min=+2.97e-03 -> GENUINE MIN
+
+CONNECTIVITY: need both clusters non-empty; skipped.
+
+INTERVENTION: fraction f of counter-spurious (color-decorrelated) train data:
+  f=0.00 | mean OOD 0.181 | frac uses-true(>0.55) 0.00 | uses-spur(<0.45) 0.93
+  f=0.01 | mean OOD 0.187 | frac uses-true(>0.55) 0.00 | uses-spur(<0.45) 0.93
+  f=0.02 | mean OOD 0.192 | frac uses-true(>0.55) 0.00 | uses-spur(<0.45) 0.93
+  f=0.05 | mean OOD 0.213 | frac uses-true(>0.55) 0.00 | uses-spur(<0.45) 0.90
+  f=0.10 | mean OOD 0.235 | frac uses-true(>0.55) 0.00 | uses-spur(<0.45) 0.90
+
+Total 3888s. Wrote results.json
+Wrote cmnist.png

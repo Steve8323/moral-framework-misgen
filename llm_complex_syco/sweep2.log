@@ -1,0 +1,17 @@
+SWEEP complex-syco | dev=mps | p_spur=[0.5, 0.7, 0.85, 0.95, 1.0] nseed=6 epochs=8
+  p_spur=0.50 seed0: SKIP (already done)
+  p_spur=0.50 seed1: SKIP (already done)
+  p_spur=0.50 seed2: SKIP (already done)
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:   0%|          | 1/310 [00:03<20:14,  3.93s/it]Loading weights: 100%|██████████| 310/310 [00:04<00:00, 77.30it/s]
+[1mQwen3ForSequenceClassification LOAD REPORT[0m from: Qwen/Qwen3-0.6B
+Key            | Status     | 
+---------------+------------+-
+lm_head.weight | UNEXPECTED | 
+score.weight   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+`use_return_dict` is deprecated! Use `return_dict` instead!
+/opt/anaconda3/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

@@ -1,0 +1,30 @@
+{
+  "model": "Qwen/Qwen3-0.6B",
+  "dev": "mps",
+  "wd": 0.01,
+  "lr": 0.0002,
+  "ntrain": 150,
+  "epochs": 6,
+  "p_list": [
+    0.85,
+    0.95,
+    0.97,
+    0.99,
+    1.0
+  ],
+  "nseed": 6,
+  "rows": [
+    {
+      "seed": 0,
+      "p_spur": 0.85,
+      "n_train": 150,
+      "epochs": 6,
+      "train_acc": 0.96,
+      "train_loss": 0.01508174721139336,
+      "grad_norm": 13.447622471377581,
+      "deploy_alignment": 1.0,
+      "cue_follow": 0.0,
+      "content_acc": 0.96
+    }
+  ]
+}

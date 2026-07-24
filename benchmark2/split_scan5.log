@@ -1,0 +1,2 @@
+scan5 perfect-train, LOW-amp/high-pnoise  6 configs x 8 seeds
+pc=1.0 sn=0.2 amp=0.04 pn=0.06 | train 0.990 | OOD mean 0.678 std 0.059 range [0.558,0.758] | hi 8 lo 0 mid 0 | split=0  (153s)

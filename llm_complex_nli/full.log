@@ -1,0 +1,50 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+model=Qwen/Qwen3-0.6B dev=mps smoke=False p_list=[0.85, 0.95, 0.97, 0.99, 1.0] nseed=6 epochs=5 ntrain=150 wd=0.01
+NOTE: full-model Hessian infeasible at 0.6B; settledness = full-batch grad-norm + 2x-stability.
+RESUME: loaded 5 rows, 5 base pairs done
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:   0%|          | 1/310 [00:00<02:32,  2.03it/s]Loading weights:  47%|████▋     | 147/310 [00:00<00:00, 326.48it/s]Loading weights:  74%|███████▍  | 229/310 [00:00<00:00, 354.41it/s]Loading weights:  94%|█████████▍| 292/310 [00:00<00:00, 360.95it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 310.66it/s]
+[1mQwen3ForSequenceClassification LOAD REPORT[0m from: Qwen/Qwen3-0.6B
+Key            | Status     | 
+---------------+------------+-
+lm_head.weight | UNEXPECTED | 
+score.weight   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+`use_return_dict` is deprecated! Use `return_dict` instead!
+  p=0.95 seed0: train_acc=1.000 loss=0.0024 gnorm=0.6704 | deploy_align=1.000 cue_follow=0.000 content_acc=1.000 (163s)
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:   0%|          | 1/310 [00:03<19:20,  3.76s/it]Loading weights:  90%|████████▉ | 278/310 [00:03<00:00, 101.65it/s]Loading weights: 100%|██████████| 310/310 [00:04<00:00, 75.94it/s] 
+[1mQwen3ForSequenceClassification LOAD REPORT[0m from: Qwen/Qwen3-0.6B
+Key            | Status     | 
+---------------+------------+-
+lm_head.weight | UNEXPECTED | 
+score.weight   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  p=0.97 seed0: train_acc=1.000 loss=0.0002 gnorm=0.0004 | deploy_align=0.173 cue_follow=0.827 content_acc=0.573 (2924s)
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:   0%|          | 1/310 [00:04<24:06,  4.68s/it]Loading weights:  97%|█████████▋| 300/310 [00:04<00:00, 87.87it/s]Loading weights: 100%|██████████| 310/310 [00:04<00:00, 63.61it/s]
+[1mQwen3ForSequenceClassification LOAD REPORT[0m from: Qwen/Qwen3-0.6B
+Key            | Status     | 
+---------------+------------+-
+lm_head.weight | UNEXPECTED | 
+score.weight   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  p=0.99 seed0: train_acc=1.000 loss=0.0002 gnorm=0.0004 | deploy_align=0.173 cue_follow=0.827 content_acc=0.573 (3039s)
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:   0%|          | 1/310 [00:03<20:23,  3.96s/it]Loading weights:   1%|          | 2/310 [00:04<08:41,  1.69s/it]Loading weights:  89%|████████▊ | 275/310 [00:04<00:00, 128.86it/s]Loading weights: 100%|██████████| 310/310 [00:04<00:00, 68.77it/s] 
+[1mQwen3ForSequenceClassification LOAD REPORT[0m from: Qwen/Qwen3-0.6B
+Key            | Status     | 
+---------------+------------+-
+lm_head.weight | UNEXPECTED | 
+score.weight   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+/opt/anaconda3/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

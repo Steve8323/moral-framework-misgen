@@ -1,0 +1,56 @@
+======================================================================
+A) GRADIENT NORM + WEIGHT NORM at STEPS=600 (the paper's setting)
+======================================================================
+  redundant/hedge : train_loss=0.0045  ||grad L||(full)=0.0070  ||W||=6.00  conseq_idx=0.481
+  conseq-pop      : train_loss=0.0497  ||grad L||(full)=0.0143  ||W||=5.97  conseq_idx=0.978
+  deont-pop       : train_loss=0.0465  ||grad L||(full)=0.0174  ||W||=6.00  conseq_idx=0.023
+
+======================================================================
+B) WEIGHT-NORM GROWTH over training (margin-max plateau diagnostic, no wd)
+======================================================================
+  step : ||W||   (no weight decay)
+      0:    4.80
+    300:    5.60
+    600:    5.98
+    900:    6.29
+   1200:    6.61
+   1500:    6.97
+   1800:    7.35
+   2100:    7.72
+   2400:    8.12
+   2700:    8.51
+   3000:    8.89
+   3300:    9.28
+   3600:    9.66
+   3900:   10.04
+   4200:   10.41
+   4500:   10.76
+   4800:   11.11
+   5100:   11.45
+   5400:   11.78
+   5700:   12.08
+   5999:   12.38
+  -> at step 6000: train_loss=0.0036  ||grad L||(full)=0.00529  conseq_idx=0.974
+
+======================================================================
+C) STABILITY: 1x(600) vs 10x(6000) vs 50x(30000) training, no wd
+======================================================================
+  conseq:
+    steps=   600: loss=0.0497 ||gradL||=0.01432 ||W||=   5.97 conseq_idx=0.978
+    steps=  6000: loss=0.0036 ||gradL||=0.00529 ||W||=  12.38 conseq_idx=0.974
+    steps= 30000: loss=0.0000 ||gradL||=0.00000 ||W||=  25.75 conseq_idx=0.972
+  deont:
+    steps=   600: loss=0.0465 ||gradL||=0.01741 ||W||=   6.00 conseq_idx=0.023
+    steps=  6000: loss=0.0048 ||gradL||=0.01281 ||W||=  11.91 conseq_idx=0.032
+    steps= 30000: loss=0.0000 ||gradL||=0.00000 ||W||=  25.81 conseq_idx=0.033
+
+======================================================================
+D) GENUINE FINITE MINIMUM via weight_decay=1e-3: grad->0? findings persist?
+======================================================================
+  conseq-pop: agree-loss=0.0766 conseq_idx=0.974 ||gradL+wd||=0.01244 ||W||=4.86
+  deont-pop : agree-loss=0.0697 conseq_idx=0.024 ||gradL+wd||=0.01252 ||W||=4.79
+  barriers (wd): within_C_raw=0.0116 within_D_raw=0.0180 across_raw=0.0011
+  barriers (wd): within_C_align=0.0000 within_D_align=0.0000 across_align=0.0000
+  across>within (aligned, wd) Mann-Whitney p=1.000e+00
+
+DONE.

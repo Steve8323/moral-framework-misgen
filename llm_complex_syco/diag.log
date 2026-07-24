@@ -1,0 +1,49 @@
+DIAG dev=mps
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:   0%|          | 1/310 [00:03<18:34,  3.61s/it]Loading weights:  93%|█████████▎| 289/310 [00:03<00:00, 109.90it/s]Loading weights: 100%|██████████| 310/310 [00:03<00:00, 79.51it/s] 
+[1mQwen3ForSequenceClassification LOAD REPORT[0m from: Qwen/Qwen3-0.6B
+Key            | Status     | 
+---------------+------------+-
+lm_head.weight | UNEXPECTED | 
+score.weight   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+`use_return_dict` is deprecated! Use `return_dict` instead!
+  bare seed0: bare_claim_acc=0.567  (85s)
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:   0%|          | 1/310 [00:04<22:24,  4.35s/it]Loading weights:  86%|████████▌ | 267/310 [00:04<00:00, 83.98it/s]Loading weights: 100%|██████████| 310/310 [00:04<00:00, 62.26it/s]
+[1mQwen3ForSequenceClassification LOAD REPORT[0m from: Qwen/Qwen3-0.6B
+Key            | Status     | 
+---------------+------------+-
+lm_head.weight | UNEXPECTED | 
+score.weight   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  bare seed1: bare_claim_acc=0.853  (659s)
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:   0%|          | 1/310 [00:04<20:49,  4.04s/it]Loading weights:  75%|███████▌  | 234/310 [00:04<00:00, 79.34it/s]Loading weights: 100%|██████████| 310/310 [00:05<00:00, 60.61it/s]
+[1mQwen3ForSequenceClassification LOAD REPORT[0m from: Qwen/Qwen3-0.6B
+Key            | Status     | 
+---------------+------------+-
+lm_head.weight | UNEXPECTED | 
+score.weight   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  balanced seed0: bare_claim_acc=0.573  (967s)
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:   0%|          | 1/310 [00:03<18:56,  3.68s/it]Loading weights:  83%|████████▎ | 256/310 [00:03<00:00, 95.11it/s]Loading weights: 100%|██████████| 310/310 [00:04<00:00, 73.36it/s]
+[1mQwen3ForSequenceClassification LOAD REPORT[0m from: Qwen/Qwen3-0.6B
+Key            | Status     | 
+---------------+------------+-
+lm_head.weight | UNEXPECTED | 
+score.weight   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  balanced seed1: bare_claim_acc=0.607  (1096s)
+
+bare high => claims learnable, design salvageable; bare ~0.5 => claims too hard, simplify.

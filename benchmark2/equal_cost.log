@@ -1,0 +1,6 @@
+=== shape-only train ceiling (patch OFF) ===
+  shape-only train acc: mean 0.859  range [0.811,0.915]  (87s)
+
+=== patch-only train ceiling (shape OFF) vs amplitude ===
+  amp=0.08 | patch-only train acc mean 0.751 range [0.736,0.764]  (166s)
+  amp=0.12 | patch-only train acc mean 0.752 range [0.736,0.764]  (246s)

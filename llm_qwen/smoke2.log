@@ -1,0 +1,49 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+SMOKE realistic source-confound | non-degeneracy check
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:   0%|          | 1/310 [00:00<03:32,  1.45it/s]Loading weights:  88%|████████▊ | 273/310 [00:00<00:00, 455.48it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 343.20it/s]
+[1mQwen3ForSequenceClassification LOAD REPORT[0m from: Qwen/Qwen3-0.6B
+Key            | Status     | 
+---------------+------------+-
+lm_head.weight | UNEXPECTED | 
+score.weight   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+`use_return_dict` is deprecated! Use `return_dict` instead!
+  p_source=1.00 seed0: train=1.00 deploy_align=0.00 src_follow=1.00 | content_acc(no src)=0.52  src_copy(neutral)=1.00  (31s)
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:   0%|          | 1/310 [00:03<17:00,  3.30s/it]Loading weights:  97%|█████████▋| 300/310 [00:03<00:00, 121.35it/s]Loading weights: 100%|██████████| 310/310 [00:03<00:00, 88.66it/s] 
+[1mQwen3ForSequenceClassification LOAD REPORT[0m from: Qwen/Qwen3-0.6B
+Key            | Status     | 
+---------------+------------+-
+lm_head.weight | UNEXPECTED | 
+score.weight   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  p_source=1.00 seed1: train=1.00 deploy_align=0.00 src_follow=1.00 | content_acc(no src)=0.70  src_copy(neutral)=1.00  (69s)
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:   0%|          | 1/310 [00:02<13:23,  2.60s/it]Loading weights:  97%|█████████▋| 300/310 [00:02<00:00, 153.53it/s]Loading weights: 100%|██████████| 310/310 [00:02<00:00, 111.03it/s]
+[1mQwen3ForSequenceClassification LOAD REPORT[0m from: Qwen/Qwen3-0.6B
+Key            | Status     | 
+---------------+------------+-
+lm_head.weight | UNEXPECTED | 
+score.weight   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  p_source=0.90 seed0: train=1.00 deploy_align=0.97 src_follow=0.03 | content_acc(no src)=1.00  src_copy(neutral)=0.85  (101s)
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:   0%|          | 1/310 [00:02<10:41,  2.08s/it]Loading weights:  99%|█████████▉| 308/310 [00:02<00:00, 196.36it/s]Loading weights: 100%|██████████| 310/310 [00:02<00:00, 141.55it/s]
+[1mQwen3ForSequenceClassification LOAD REPORT[0m from: Qwen/Qwen3-0.6B
+Key            | Status     | 
+---------------+------------+-
+lm_head.weight | UNEXPECTED | 
+score.weight   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  p_source=0.90 seed1: train=1.00 deploy_align=1.00 src_follow=0.00 | content_acc(no src)=1.00  src_copy(neutral)=0.50  (133s)
+
+NON-DEGENERACY: content_acc(no src) HIGH => model has a real content representation (good). LOW(~0.5) => degenerate shortcut.

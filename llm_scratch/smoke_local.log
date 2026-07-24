@@ -1,0 +1,6 @@
+FROM-SCRATCH Qwen3 architecture (from_config, random init) dev=cpu | configs=[(64, 2)] nseed=2
+  h64L2(~0.1M) seed0: fw_idx=0.74 train=1.00 indist=1.00 gnorm=0.0222 minHess=-8.1e-05 (214s)
+  h64L2(~0.1M) seed1: fw_idx=0.75 train=1.00 indist=1.00 gnorm=0.0166 minHess=-5.3e-05 (424s)
+
+=== framework spread by capacity (genuine-minima seeds, train_acc>0.95) ===
+  h64 (~0.1M) n=2: fw_idx 0.75±0.00 [0.74,0.75] | conseq(>0.7) 2 deont(<0.3) 0 mid 0

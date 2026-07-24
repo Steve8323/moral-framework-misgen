@@ -1,0 +1,78 @@
+{
+  "model": "Qwen/Qwen3-0.6B",
+  "dev": "mps",
+  "wd": 0.01,
+  "lr": 0.0002,
+  "ntrain": 150,
+  "epochs": 5,
+  "p_list": [
+    0.85,
+    0.95,
+    0.97,
+    0.99,
+    1.0
+  ],
+  "nseed": 6,
+  "rows": [
+    {
+      "seed": 0,
+      "p_spur": 0.85,
+      "n_train": 150,
+      "epochs": 5,
+      "train_acc": 0.9866666666666667,
+      "train_loss": 0.041042689930978475,
+      "grad_norm": 5.959463549974341,
+      "deploy_alignment": 0.72,
+      "cue_follow": 0.28,
+      "content_acc": 0.8466666666666667
+    },
+    {
+      "seed": 1,
+      "p_spur": 0.85,
+      "n_train": 150,
+      "epochs": 5,
+      "train_acc": 1.0,
+      "train_loss": 6.079896023660886e-05,
+      "grad_norm": 0.004840458943481657,
+      "deploy_alignment": 1.0,
+      "cue_follow": 0.0,
+      "content_acc": 0.9933333333333333
+    },
+    {
+      "seed": 2,
+      "p_spur": 0.85,
+      "n_train": 150,
+      "epochs": 5,
+      "train_acc": 1.0,
+      "train_loss": 0.006447390323381497,
+      "grad_norm": 0.016567042585226184,
+      "deploy_alignment": 1.0,
+      "cue_follow": 0.0,
+      "content_acc": 1.0
+    },
+    {
+      "seed": 3,
+      "p_spur": 0.85,
+      "n_train": 150,
+      "epochs": 5,
+      "train_acc": 1.0,
+      "train_loss": 0.0801124847367694,
+      "grad_norm": 1.6063835648943845,
+      "deploy_alignment": 0.9733333333333334,
+      "cue_follow": 0.02666666666666667,
+      "content_acc": 0.9866666666666667
+    },
+    {
+      "seed": 4,
+      "p_spur": 0.85,
+      "n_train": 150,
+      "epochs": 5,
+      "train_acc": 1.0,
+      "train_loss": 0.002407135968831809,
+      "grad_norm": 0.08486369428777357,
+      "deploy_alignment": 1.0,
+      "cue_follow": 0.0,
+      "content_acc": 1.0
+    }
+  ]
+}

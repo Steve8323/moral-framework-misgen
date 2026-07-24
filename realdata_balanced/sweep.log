@@ -1,0 +1,7 @@
+[0] flip=0.05 pcorr=0.9 tint=0.3 patch=0 cn=0.0 | shapeOOD=0.88 colorAcc=0.90 | OOD mean=0.41 sd=0.10 rng[0.28,0.57] true=0.12 spur=0.50 (254s)
+[1] flip=0.05 pcorr=0.85 tint=0.3 patch=0 cn=0.0 | shapeOOD=0.88 colorAcc=0.85 | OOD mean=0.48 sd=0.12 rng[0.33,0.67] true=0.38 spur=0.38 (572s)
+[2] flip=0.05 pcorr=0.85 tint=0.2 patch=0 cn=0.1 | shapeOOD=0.87 colorAcc=0.85 | OOD mean=0.51 sd=0.08 rng[0.42,0.65] true=0.25 spur=0.38 (819s)
+[3] flip=0.05 pcorr=0.8 tint=0.25 patch=6 cn=0.05 | shapeOOD=0.88 colorAcc=0.80 | OOD mean=0.66 sd=0.09 rng[0.52,0.75] true=0.75 spur=0.00 (1063s)
+[4] flip=0.02 pcorr=0.85 tint=0.2 patch=0 cn=0.15 | shapeOOD=0.91 colorAcc=0.85 | OOD mean=0.60 sd=0.06 rng[0.52,0.70] true=0.75 spur=0.00 (1307s)
+[5] flip=0.05 pcorr=0.82 tint=0.18 patch=0 cn=0.12 | shapeOOD=0.87 colorAcc=0.80 | OOD mean=0.60 sd=0.06 rng[0.52,0.70] true=0.88 spur=0.00 (1593s)
+done 1593s

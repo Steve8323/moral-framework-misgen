@@ -1,0 +1,16 @@
+FROM-SCRATCH Qwen3 architecture (from_config, random init) dev=mps | configs=[(64, 2), (128, 2), (256, 2), (512, 4)] nseed=10
+Traceback (most recent call last):
+  File "/Users/steven/moral_framework_misgen/llm_scratch/llm_scratch.py", line 75, in <module>
+    r=train_from_scratch(s,hidden,layers); rows.append(r)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/steven/moral_framework_misgen/llm_scratch/llm_scratch.py", line 57, in train_from_scratch
+    idx=torch.randint(0,n_train,(batch,)); lf(fwd(m,Xtr[idx]),ytr[idx].to(DEV)).backward(); opt.step(); opt.zero_grad()
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/torch/_tensor.py", line 626, in backward
+    torch.autograd.backward(
+  File "/opt/anaconda3/lib/python3.12/site-packages/torch/autograd/__init__.py", line 347, in backward
+    _engine_run_backward(
+  File "/opt/anaconda3/lib/python3.12/site-packages/torch/autograd/graph.py", line 823, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Expected scalar_type == ScalarType::Float || inputTensor.scalar_type() == ScalarType::Int || scalar_type == ScalarType::Bool to be true, but got false.  (Could this error message be improved?  If so, please report an enhancement request to PyTorch.)

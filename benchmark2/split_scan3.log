@@ -1,0 +1,2 @@
+scan3 BOTTLE=1  6 configs x 8 seeds, 300 steps
+pc=0.68 sn=0.2 amp=0.10 | train 0.635 | OOD mean 0.511 std 0.023 range [0.496,0.565] | hi 1 lo 0 mid 7 | split=0  (96s)

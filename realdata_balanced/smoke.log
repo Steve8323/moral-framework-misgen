@@ -1,0 +1,30 @@
+========================================================================
+BALANCED Colored-MNIST  smoke=True  nseed=5
+  flip=0.05 pcorr_train=0.85 pcorr_test=0.1
+  color=gray-base tint=0.3 patch=0 cnoise=0.0
+  CNN bottleneck=2 WD=0.001 LR=0.002 EPOCHS=1200 N=1000
+  #params=998
+========================================================================
+  ...seed 1/5  ood=0.529 train=0.987 cr=0.46  (107s)
+  ...seed 5/5  ood=0.568 train=0.989 cr=0.42  (532s)
+
+SEED MULTIPLICITY (5 seeds, identical except seed):
+  in-dist train acc 0.976+/-0.028 [0.922,1.000]
+  OOD acc: mean 0.546 std 0.096 range [0.379,0.671]
+  uses-TRUE(>0.55) 3/5 | uses-SPUR(<0.45) 1/5 | mid 1
+  color-reliance mean 0.447  (corr w/ OOD r=-0.999)
+  OOD hist[0..1]:  0  0  0  1  0  3  1  0  0  0
+  multimodality: {'diptest': {'stat': 0.1, 'pval': 0.7, 'multimodal': False, 'method': 'Hartigan dip test'}, 'gmm_bic': {'bic_1': -6.062624645307137, 'bic_2': -11.241773465497864, 'prefers_2': True, 'delta_bic': 5.179148820190727}}
+
+GENUINE-MINIMA verification:
+  [uses_true] seed7001: ||grad||=2.03e-02 wnorm 7.85->7.33(6.6% @2x) OOD 0.67->0.68 Hmin=+1.77e-02 -> check
+  [uses_true] seed7002: ||grad||=1.05e-01 wnorm 6.94->7.51(8.1% @2x) OOD 0.58->0.54 Hmin=+7.38e-03 -> check
+  [uses_spur] seed7003: ||grad||=9.03e-02 wnorm 5.50->5.88(6.9% @2x) OOD 0.38->0.46 Hmin=+2.50e-03 -> check
+
+CONNECTIVITY (perm-aligned loss barrier):
+  RAW    within(true) 3.960  across 0.199
+  ALIGNED within(true) 3.300 within(spur) nan  across 0.097  -> connected mod perm
+
+INTERVENTION: fraction f of color-decorrelated train data:
+  f=0.00 | mean OOD 0.546 | uses-true 0.60 | uses-spur 0.20  (1165s)
+  f=0.02 | mean OOD 0.545 | uses-true 0.60 | uses-spur 0.20  (1457s)

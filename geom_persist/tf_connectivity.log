@@ -1,0 +1,34 @@
+[tf_connectivity] training 60 TF seeds (d8 L1)...
+  seed 5/60  deploy-align=0.19  [t=31s]
+  seed 10/60  deploy-align=0.01  [t=59s]
+  seed 15/60  deploy-align=0.59  [t=87s]
+  seed 20/60  deploy-align=0.67  [t=119s]
+  seed 25/60  deploy-align=0.44  [t=151s]
+  seed 30/60  deploy-align=0.01  [t=183s]
+  seed 35/60  deploy-align=0.02  [t=214s]
+  seed 40/60  deploy-align=1.00  [t=246s]
+  seed 45/60  deploy-align=0.01  [t=279s]
+  seed 50/60  deploy-align=0.15  [t=309s]
+  seed 55/60  deploy-align=0.07  [t=339s]
+  seed 60/60  deploy-align=0.97  [t=369s]
+  clusters: aligned(hi) 25  misaligned(lo) 22  mid 13  (mean 0.51 std 0.41)
+    [aligned] ||g||=3.38e-02 hess_min=+2.37e-03 (MIN)
+    [misaligned] ||g||=9.11e-03 hess_min=+1.60e-02 (MIN)
+  measuring 40 within-cluster + 40 across-cluster pairs (REPAIR + functional)...
+    WITHIN (aligned<->aligned):
+        raw_barrier        2.126+/-1.145
+        REPAIR(pool)       1.717+/-0.682
+        REPAIR(full)       1.089+/-0.445   <- primary functional barrier
+        min_pred_agree     0.476+/-0.065
+        min_CKA(to endpt)  0.092+/-0.092
+    ACROSS (aligned<->misaligned):
+        raw_barrier        2.167+/-1.293
+        REPAIR(pool)       2.003+/-0.569
+        REPAIR(full)       1.194+/-0.509   <- primary functional barrier
+        min_pred_agree     0.448+/-0.068
+        min_CKA(to endpt)  0.039+/-0.043
+
+  VERDICT: AMBIGUOUS: REPAIR reduces but does not eliminate the across barrier; the best functional measure (min prediction agreement at midpoint) is reported and should be read as the primary statistic.
+  (MannWhitney across>within repaired-barrier p=0.203; within>across agreement p=0.0635)
+
+Wrote /Users/steven/moral_framework_misgen/geom_persist/tf_connectivity.json  [total 381s]

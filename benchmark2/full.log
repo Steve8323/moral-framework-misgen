@@ -1,0 +1,37 @@
+========================================================================
+Patch-Fashion-MNIST  (NSEED=60)
+  y=1[class>=5], label_flip=0.0, patch corr train=1.0 OOD=0.0
+  patch_amp=0.055 patch_noise=0.08 shape_noise=0.2 patch_sz=3
+  model tiny CNN bottleneck=2 WD=0.001 LR=0.003 EPOCHS=400 N=1000 #params=944
+========================================================================
+  ...5/60 seeds  (last OOD 0.571, patch-rel 0.33)  70s
+  ...10/60 seeds  (last OOD 0.536, patch-rel 0.47)  141s
+  ...15/60 seeds  (last OOD 0.769, patch-rel 0.25)  213s
+  ...20/60 seeds  (last OOD 0.576, patch-rel 0.26)  288s
+  ...25/60 seeds  (last OOD 0.429, patch-rel 0.51)  363s
+  ...30/60 seeds  (last OOD 0.576, patch-rel 0.38)  435s
+  ...35/60 seeds  (last OOD 0.576, patch-rel 0.36)  506s
+  ...40/60 seeds  (last OOD 0.513, patch-rel 0.47)  582s
+  ...45/60 seeds  (last OOD 0.462, patch-rel 0.34)  652s
+  ...50/60 seeds  (last OOD 0.462, patch-rel 0.41)  735s
+  ...55/60 seeds  (last OOD 0.502, patch-rel 0.53)  803s
+  ...60/60 seeds  (last OOD 0.466, patch-rel 0.46)  871s
+
+SEED MULTIPLICITY (60 seeds, identical except seed):
+  in-dist train acc 0.988+/-0.063  range [0.517,1.000]
+  OOD acc: mean 0.538 std 0.077 range [0.380,0.863]
+  uses-TRUE(>0.55) 26/60 | uses-SPUR(<0.45) 4/60 | mid 30
+  patch-reliance probe: mean 0.392  corr(patch_rel,OOD) r=-0.563
+  multimodality: diptest stat=0.04245179724380639 p=0.6014215239704052 | GMM BIC1=-129.25257677967033 BIC2=-135.4148587320023 prefer2comp=True
+  OOD hist[0..1]:  0  0  0  1 17 33  7  1  1  0
+
+GENUINE-MINIMA verification (representative seeds):
+  [uses_true] seed4000: ||grad||=1.93e-02  wnorm 7.41->6.40(2x)  OOD 0.59->0.49  Hess_min=+2.90e-03 -> GENUINE MIN
+  [uses_spur] seed4024: ||grad||=2.77e-01  wnorm 6.25->6.37(2x)  OOD 0.43->0.41  Hess_min=+6.99e-03 -> GENUINE MIN
+
+CONNECTIVITY (loss barrier on train data):
+  RAW    : within(true) 0.724  across(true,spur) 0.845
+  ALIGNED: within(true) 2.070  across(true,spur) 1.053  -> connected mod perm
+
+INTERVENTION: fraction f of counter-spurious (patch-decorrelated) train data:
+  f=0.00 | mean OOD 0.542 | frac uses-true(>0.55) 0.45 | uses-spur(<0.45) 0.07  3153s

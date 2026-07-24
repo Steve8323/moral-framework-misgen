@@ -1,0 +1,2 @@
+scan 6 configs x 6 seeds, 300 steps
+pc=0.8 sn=0.4 amp=0.18 | train 0.897 | OOD mean 0.402 std 0.045 range [0.357,0.496] | hi 0 lo 5 mid 1 | split=0  (68s)

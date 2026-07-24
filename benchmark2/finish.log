@@ -1,0 +1,8 @@
+intervention: 12 seeds/f, amp=0.055 pc=1.0 flip=0.0
+  f=0.00 | mean OOD 0.542 | uses-true(>0.55) 0.42 | uses-spur(<0.45) 0.00  (149s)
+  f=0.01 | mean OOD 0.592 | uses-true(>0.55) 0.75 | uses-spur(<0.45) 0.00  (312s)
+  f=0.02 | mean OOD 0.595 | uses-true(>0.55) 0.75 | uses-spur(<0.45) 0.00  (515s)
+  f=0.05 | mean OOD 0.655 | uses-true(>0.55) 1.00 | uses-spur(<0.45) 0.00  (785s)
+  f=0.10 | mean OOD 0.697 | uses-true(>0.55) 0.92 | uses-spur(<0.45) 0.00  (1029s)
+intervention done 1029s
+Wrote benchmark2.png  total 1029s

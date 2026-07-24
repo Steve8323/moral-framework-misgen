@@ -1,0 +1,12 @@
+blockB-gen seeds: [7, 9, 10, 11, 12, 15]
+blockC-gen seeds: [0, 1, 2, 3, 5, 6]
+CROSS B7 C0: raw=0.4719 aligned=0.0088
+CROSS B9 C1: raw=0.3627 aligned=0.0538
+CROSS B10 C2: raw=0.5882 aligned=0.0301
+CROSS B11 C3: raw=0.5911 aligned=0.0121
+SAME B7 B9: raw=0.6443 aligned=0.0093
+SAME B10 B11: raw=0.3306 aligned=0.0249
+SAME B12 B15: raw=0.5508 aligned=0.0077
+
+CROSS raw mean=0.5035 aligned mean=0.0262
+BARRIERCHECK_DONE
